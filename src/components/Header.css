@@ -1,0 +1,92 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* This makes the header stick to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* This ensures the header stays on top of other content */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: #6b21a8; /* purple-800 */
+  font-size: 1.25rem;
+}
+
+.navigation {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #374151; /* gray-700 */
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #6b21a8; /* purple-800 */
+}
+
+.donate-button {
+  background-color: #6b21a8; /* purple-800 */
+  color: white !important;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.donate-button:hover {
+  background-color: #581c87; /* purple-900 */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    margin: 0.25rem;
+  }
+}

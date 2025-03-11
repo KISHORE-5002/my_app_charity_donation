@@ -1,0 +1,152 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Full-page layout */
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Card Layout */
+.login-box {
+    display: flex;
+    width: 800px;
+    max-width: 100%;
+    height: 450px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+/* Left Section - Gradient Background */
+.left-panel {
+    width: 50%;
+    background: linear-gradient(to bottom, #1f1f1f, #8b1e3f);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.left-panel h2 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+}
+
+/* Right Section - Login Form */
+.right-panel {
+    width: 50%;
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Heading */
+.right-panel h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f8f8f8;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+.input-field::placeholder {
+    color: #aaa;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Sign-in Button */
+.sign-in-btn {
+    width: 100%;
+    background: #9C3353;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.sign-in-btn:hover {
+    background: #0056b3;
+}
+
+/* Links */
+.link {
+    display: block;
+    text-align: right;
+    color: #007bff;
+    font-size: 14px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Text */
+.footer-text {
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .left-panel {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 30px;
+    }
+}

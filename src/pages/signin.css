@@ -1,0 +1,182 @@
+.signin-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.signin-card {
+  width: 50%;
+  padding: 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+.small-logo {
+  display: flex;
+  align-items: center;
+}
+
+.small-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.small-logo span {
+  margin-left: 8px;
+  font-size: 18px;
+  color: #666;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+.sign-in-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #9C3353;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.sign-in-button:hover {
+  background-color: #854995;
+}
+
+.alternative-signin {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.alternative-signin p {
+  color: #777;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.alternative-signin p::before,
+.alternative-signin p::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 30%;
+  background-color: #ddd;
+}
+
+.alternative-signin p::before {
+  left: 0;
+}
+
+.alternative-signin p::after {
+  right: 0;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.social-button:hover {
+  transform: scale(1.05);
+}
+
+.social-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.signup-prompt {
+  margin-top: 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.signup-prompt a {
+  color: #9c55ac;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.brand-illustration {
+  width: 50%;
+  background-color: #f7f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mitra-illustration {
+  width: 80%;
+  max-height: 80%;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .signin-container {
+    flex-direction: column;
+  }
+
+  .signin-card {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .brand-illustration {
+    display: none;
+  }
+}

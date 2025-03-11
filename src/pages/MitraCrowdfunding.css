@@ -1,0 +1,503 @@
+/* MitraCrowdfunding.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #9e2b4a;
+  --secondary-color: #f1ddee;
+  --accent-color: #e9b0d0;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --white: #ffffff;
+  --border-color: #e0e0e0;
+  --success-color: #28a745;
+  --heart-color: #ff4d4d;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.mitra-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link.active,
+.nav-link.support {
+  color: var(--primary-color);
+}
+
+.nav-link.active::after,
+.nav-link.support::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.donate-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+  background-color: #8a2541;
+}
+
+/* No Fees Banner */
+.no-fees-banner {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f5f5f5;
+  color: var(--text-dark);
+  margin-bottom: 1px;
+}
+
+.megaphone-icon {
+  color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.banner-text {
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.percentage {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-left: 1rem;
+}
+
+/* Main Content */
+.main-content {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-button svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.category-button span {
+  font-size: 0.8rem;
+  color: var(--text-dark);
+}
+
+.category-button.active {
+  background-color: var(--primary-color);
+}
+
+.category-button.active svg,
+.category-button.active span {
+  color: var(--white);
+}
+
+/* Fundraiser Grid */
+.fundraiser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.fundraiser-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fundraiser-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-image-container {
+  height: 160px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.6rem;
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.creator-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.creator-avatar svg {
+  width: 16px;
+  height: 16px;
+  color: var(--text-light);
+}
+
+.by-text {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.fundraiser-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.progress-text {
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.supporters {
+  display: flex;
+  align-items: center;
+}
+
+.supporters svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.25rem;
+  color: var(--heart-color);
+}
+
+.supporters span {
+  font-size: 0.7rem;
+  color: var(--text-light);
+}
+
+.last-updated {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--success-color);
+}
+
+.last-updated svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.25rem;
+  color: var(--success-color);
+}
+
+/* Tagline */
+.tagline {
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.address,
+.contact-info {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.donate-button.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.inspire-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.inspire-button:hover {
+  background-color: #8a2541;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: var(--primary-color);
+}
+
+.contact-button {
+  background-color: #4caf50;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #3e8e41;
+}
+
+.contact-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  color: var(--text-light);
+  gap: 1rem;
+}
+
+.divider {
+  color: var(--border-color);
+}
+
+.copyright {
+  color: var(--text-light);
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fundraiser-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navigation {
+    margin: 1rem 0;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fundraiser-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .category-buttons {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,241 @@
+/* MitraContactPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.mitra-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: #ff6b6b;
+}
+
+.donate-btn {
+  background-color: #4432a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Contact Header Section */
+.contact-header {
+  background-color: #4432a8;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+}
+
+.contact-header-content {
+  max-width: 500px;
+}
+
+.contact-header-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-header-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-header-image img {
+  max-width: 350px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 60px;
+  position: relative;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: #4432a8;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #444;
+}
+
+.footer-section p {
+  line-height: 1.5;
+  color: #444;
+}
+
+.footer-donate-btn {
+  margin-top: 15px;
+  background-color: transparent;
+  color: #4432a8;
+  border: 1px solid #4432a8;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.inspire-box {
+  background-color: #a83244;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.find-us {
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.contact-button {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-btn {
+  background-color: #7CFC00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.contact-icon {
+  background-color: white;
+  color: #7CFC00;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+/* Contact Us Section */
+.contact-us-section {
+  margin-top: 40px;
+}
+
+.contact-us-section h3 {
+  color: #4432a8;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.contact-us-section p {
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Dark Footer */
+.dark-footer {
+  height: 70px;
+  background-color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-header {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .contact-header-image {
+    margin-top: 30px;
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
