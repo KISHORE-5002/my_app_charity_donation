@@ -3,28 +3,15 @@ import './Support.css';
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
 import { Link } from "react-router-dom";
 import  ScrollToTop from "../components/ScrollToTop"
+import  Header from "../components/Header"
+import  Footer from "../components/Footer"
 
 const Support = () => {
   return (
-    <div className="fundraiser-page">
+    <div className="mitra-website ">
     <ScrollToTop />
       {/* Header */}
-      <header className="header">
-        <div className="logo">
-          <img src="/logo.png" alt="Mitra Logo" />
-          <span>mitra</span>
-        </div>
-        <nav className="main-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#" className="active">Support</a></li>
-            <li><a href="#">Others</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <button className="donate-btn">Donate</button>
-      </header>
+     <Header />
 
       {/* Main Content */}
       <main className="main-content">
@@ -167,7 +154,7 @@ const Support = () => {
         </div>
       </main>
 
-
+<Footer />
     </div>
   );
 };

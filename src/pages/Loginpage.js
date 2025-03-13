@@ -43,7 +43,7 @@ const LoginPage = () => {
 
                 <Link to="/pages/AdminLogin">Admin Login</Link><br></br>
                 <Link to="/pages/MitraApp">
-               <button className="User-Login-btn">User Login</button>
+               <button className="User-Login-btn">GetStart</button>
                </Link>
 
              </a>

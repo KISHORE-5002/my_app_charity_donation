@@ -1,5 +1,6 @@
 import React from 'react';
-import './Header.css'; // Make sure this CSS file exists
+import Logo from '../assests/img.png';
+import './Header.css';// Make sure this CSS file exists
 
 const Header = () => {
   // Handle smooth scrolling for anchor links
@@ -14,7 +15,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/api/placeholder/40/40" alt="Mitra Logo" className="logo-image" />
+        <img src={Logo} alt="Mitra Logo" className="logo-image" />
         <span className="logo-text">MITRA</span>
       </div>
       <nav className="navigation">

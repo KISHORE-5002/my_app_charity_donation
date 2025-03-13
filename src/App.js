@@ -22,11 +22,11 @@ const App=()=> {
     <BrowserRouter>
 
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<MitraApp/>} />
+        <Route path="/pages/MitraApp" element={<LoginPage />} />
         <Route path="/pages/AdminLogin" element={<AdminLogin />} />
         <Route path="/pages/Signin" element={<Signin />} />
         <Route path="/pages/MitraSignup" element={<MitraSignup/>} />
-        <Route path="/pages/MitraApp" element={<MitraApp/>} />
         <Route path="/pages/Support" element={<Support />} />
         <Route path="/pages/About" element={<About />} />
         <Route path="/pages/BrightFutures" element={<BrightFutures />} />

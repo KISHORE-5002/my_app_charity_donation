@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
 import { Link } from "react-router-dom";
+import Logo from '../assests/img.png';
 import './signin.css';
 
 
@@ -20,8 +21,8 @@ const Signin = () => {
       <div className="signin-card">
         <div className="logo-container">
           <div className="small-logo">
-            <img src="/mitra-small-logo.svg" alt="Mitra" />
-            <span>mitra</span>
+
+            <span></span>
           </div>
         </div>
 
@@ -69,7 +70,7 @@ const Signin = () => {
             </button>
           </div>
         </div>
-         <Link to="MitraSignup">
+         <Link to="/pages/MitraSignup">
         <p className="signup-prompt">
           Don't have an account? <a href="/signup">SIGN UP</a>
         </p>
@@ -77,7 +78,7 @@ const Signin = () => {
       </div>
 
       <div className="brand-illustration">
-        <img src="/mitra-illustration.svg" alt="Mitra Brand" className="mitra-illustration" />
+        <img src={Logo} alt="Mitra Brand" className="mitra-illustration" />
       </div>
     </div>
   );

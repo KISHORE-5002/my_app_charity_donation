@@ -1,7 +1,8 @@
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
 import React, { useState } from 'react';
+import Logo from '../assests/img.png';
 import './MitraSignup.css';
-import Header from "../components/Header"
+
 
 const MitraSignup = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ const MitraSignup = () => {
 
   return (
     <div className="mitra-container">
-    <Header />
+
 
 
       <h1 className="title">Create your account</h1>
@@ -120,6 +121,7 @@ const MitraSignup = () => {
           <div className="login-link"><a href="/pages/Loginpage" className="login-in-link"/>LOGIN</div>
         </div>
       </form>
+
     </div>
   );
 };

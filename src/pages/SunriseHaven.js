@@ -2,26 +2,17 @@ import React from 'react';
 import './SunriseHaven.css';
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
 import { Link } from "react-router-dom";
+import  Footer from "../components/Footer"
 import  ScrollToTop from "../components/ScrollToTop"
+import  Header from "../components/Header"
+
 
 const SunriseHaven = () => {
   return (
     <div className="page-container">
     <ScrollToTop />
       {/* Header */}
-      <header className="header">
-        <div className="logo-container">
-          <img src="/logo.svg" alt="Mitra logo" className="logo" />
-        </div>
-        <nav className="navigation">
-          <a href="#" className="nav-link">Home</a>
-          <a href="#" className="nav-link">About</a>
-          <a href="#" className="nav-link active">Support</a>
-          <a href="#" className="nav-link">Others</a>
-          <a href="#" className="nav-link">Contact</a>
-        </nav>
-        <button className="donate-button">Donate</button>
-      </header>
+     <Header />
 
       {/* Main content */}
       <main className="main-content">
@@ -178,7 +169,7 @@ const SunriseHaven = () => {
         </div>
       </main>
 
-
+<Footer />
     </div>
   );
 };

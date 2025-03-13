@@ -13,12 +13,11 @@ body {
 }
 
 /* Header/Navigation */
-.mitra-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+.mitra-website {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.5;
 }
-
 .header {
   display: flex;
   justify-content: space-between;

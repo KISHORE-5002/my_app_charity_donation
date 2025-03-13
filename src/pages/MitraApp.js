@@ -2,16 +2,27 @@ import React from 'react';
 import './MitraApp.css';
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+import Logo from '../assests/img.png';
+import Image6 from '../assests/Image6.png';
+import Image7 from '../assests/Image7.png';
+import Image8 from '../assests/Image8.png';
+import Image9 from '../assests/Image9.png';
+import Image10 from '../assests/Image10.png';
+import Image11 from '../assests/Image11.png';
 import  ScrollToTop from "../components/ScrollToTop"
+
 
 const MitraApp = () => {
   return (
-    <div className="mitra-container">
+    <div className="mitra-website">
     < ScrollToTop />
       {/* Header/Navigation */}
       <header className="header">
         <div className="logo">
-          <img src="/logo.png" alt="Mitra" />
+          <img src={Logo} alt="Mitra" />
         </div>
         <nav className="navigation">
           <a href="MitraApp" className="nav-link active">Home</a>
@@ -58,15 +69,21 @@ const MitraApp = () => {
         <div className="category-tabs">
           <div className="category-tab active">
             <img src="/medical-icon.svg" alt="Medical" />
+            <Link to="/pages/Support">
             <p>Medical</p>
+            </Link>
           </div>
           <div className="category-tab">
             <img src="/home-icon.svg" alt="Home" />
+            <Link to="/pages/MitraApp">
             <p>Home</p>
+            </Link>
           </div>
           <div className="category-tab">
             <img src="/children-icon.svg" alt="Children" />
+            <Link to="/pages/Children">
             <p>Children</p>
+            </Link>
           </div>
         </div>
 
@@ -75,12 +92,12 @@ const MitraApp = () => {
           {/* Card 1 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src="/fundraiser1.jpg" alt="Daughter fighting for her life" />
+              <img src={Image6} alt="Daughter fighting for her life" />
             </div>
             <div className="card-content">
               <h3 className="card-title">My Daughter Is Fighting For Her Life, Please Help Me Support To Save Her</h3>
               <div className="fundraiser-author">
-                <img src="/user-icon.svg" alt="User" className="user-icon" />
+                <img src={Image6} alt="User" className="user-icon" />
                 <span>By Sunanda</span>
               </div>
               <p className="raised-text">Raised out of</p>
@@ -102,12 +119,12 @@ const MitraApp = () => {
           {/* Card 2 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src="/fundraiser2.jpg" alt="Help Sangavi" />
+              <img src={Image7} alt="Help Sangavi" />
             </div>
             <div className="card-content">
               <h3 className="card-title">Help Sangram  Halder Fight Lung Cancer!</h3>
               <div className="fundraiser-author">
-                <img src="/user-icon.svg" alt="User" className="user-icon" />
+                <img src={Image7} alt="User" className="user-icon" />
                 <span>By Sangam</span>
               </div>
               <p className="raised-text">Raised out of</p>
@@ -127,12 +144,12 @@ const MitraApp = () => {
           {/* Card 3 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src="/fundraiser3.jpg" alt="Sunitha needs blessing" />
+              <img src={Image8} alt="Sunitha needs blessing" />
             </div>
             <div className="card-content">
               <h3 className="card-title">SunriseHaven -A Home of love and care for the Elderly</h3>
               <div className="fundraiser-author">
-                <img src="/user-icon.svg" alt="User" className="user-icon" />
+                <img src={Image8} alt="User" className="user-icon" />
                 <span>By  fani</span>
               </div>
               <p className="raised-text">Raised Rs 5,238 Raised out of Rs 700,000</p>
@@ -157,12 +174,12 @@ const MitraApp = () => {
           {/* Card 4 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src="/fundraiser4.jpg" alt="Help my mother" />
+              <img src={Image9} alt="Help my mother" />
             </div>
             <div className="card-content">
               <h3 className="card-title">Help My Mother, Fight very Rare Aggressive Cancer-Bile Duct Cancer/Cholangiocarcinoma</h3>
               <div className="fundraiser-author">
-                <img src="/user-icon.svg" alt="User" className="user-icon" />
+                <img src={Image9} alt="User" className="user-icon" />
                 <span>By Parthap</span>
               </div>
               <p className="raised-text">Raised out of</p>
@@ -182,7 +199,7 @@ const MitraApp = () => {
           {/* Card 5 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src="/fundraiser5.jpg" alt="Help Manvi" />
+              <img src={Image10} alt="Help Manvi" />
             </div>
             <div className="card-content">
               <h3 className="card-title">Help Secure a Bright Future for 13 Year-Old Naniyaka After the Tragic loss of her Father</h3>
@@ -209,7 +226,7 @@ const MitraApp = () => {
           {/* Card 6 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src="/fundraiser6.jpg" alt="Help Secure a Bright Future" />
+              <img src={Image11} alt="Help Secure a Bright Future" />
             </div>
             <div className="card-content">
               <h3 className="card-title">Help Secure a Bright Future for 14 Year-Old Naniyaka After the Tragic Loss of her Mother</h3>
@@ -248,7 +265,7 @@ const MitraApp = () => {
           {/* Offer 1 */}
           <div className="offer-card">
             <div className="offer-icon heart-icon">
-              <img src="/heart-icon.svg" alt="Heart" />
+              <FontAwesomeIcon icon="fa-regular fa-heart" />
             </div>
             <div className="offer-text">
               <p>Starting a fundraiser on swayam NM is absolutely free.</p>
