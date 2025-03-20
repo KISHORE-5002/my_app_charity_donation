@@ -1,8 +1,11 @@
 import React from 'react';
 import './SunriseHaven.css';
+import { FaVolumeUp} from "react-icons/fa";
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
 import { Link } from "react-router-dom";
 import  Footer from "../components/Footer"
+import  Old from "../assests/Old.png"
+import  girls from "../assests/girls.png"
 import  ScrollToTop from "../components/ScrollToTop"
 import  Header from "../components/Header"
 
@@ -22,12 +25,12 @@ const SunriseHaven = () => {
         <div className="fundraiser-section">
           <div className="left-column">
             <div className="image-container">
-              <img src="/elderly-woman.jpg" alt="Elderly woman looking out window" className="main-image" />
+              <img src={Old} alt="Elderly woman looking out window" className="main-image" />
             </div>
 
             <div className="creator-info">
               <div className="avatar">
-                <img src="/avatar.svg" alt="Avatar" />
+                <img src={girls} alt="Avatar" />
               </div>
               <div className="creator-text">
                 <p className="created-text">created</p>
@@ -127,8 +130,9 @@ const SunriseHaven = () => {
             </div>
 
             <div className="donation-form">
+            <Link to="/pages/Donate">
               <h2 className="contribute-heading">Contribute now <span className="heart-icon">♥</span></h2>
-
+                </Link>
               <form>
                 <div className="form-group">
                   <label htmlFor="name">Name:</label>
@@ -144,8 +148,9 @@ const SunriseHaven = () => {
                   <label htmlFor="contribution">Contribution:</label>
                   <input type="text" id="contribution" placeholder="Contribution" />
                 </div>
-
+                <Link to="/pages/Donate">
                 <button type="submit" className="donate-button form-button">Donate</button>
+                </Link>
               </form>
 
               <p className="tagline">"Be the Change with Every Click"</p>
@@ -162,7 +167,7 @@ const SunriseHaven = () => {
 
         <div className="fees-section">
           <div className="fees-icon">
-            <img src="/megaphone.svg" alt="Megaphone icon" />
+             <FaVolumeUp size={30} color="green" />
           </div>
           <div className="fees-text">Crowdfunding charges No fees</div>
           <div className="fees-percentage">0%</div>

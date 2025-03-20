@@ -1,11 +1,23 @@
 import React from 'react';
 import './MitraApp.css';
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
-import { Link } from "react-router-dom";
+import Footer from "../components/Footer"
+import { FaVolumeUp} from "react-icons/fa";
+import { Baby, Users } from "lucide-react";
+import { Home } from "@mui/icons-material";
+import { FaHeart } from 'react-icons/fa';
+import { FaComment } from 'react-icons/fa';
+import { MdDashboard } from 'react-icons/md';
+import { FaCreditCard } from 'react-icons/fa';
+import { Stethoscope } from "lucide-react";
+import { FaRupeeSign, FaDollarSign, FaEuroSign, FaPoundSign } from 'react-icons/fa';
+import {  faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faHeadset } from '@fortawesome/free-solid-svg-icons';
 
+import { Link } from "react-router-dom";
 import Logo from '../assests/img.png';
+import H from '../assests/H.png';
 import Image6 from '../assests/Image6.png';
 import Image7 from '../assests/Image7.png';
 import Image8 from '../assests/Image8.png';
@@ -13,29 +25,15 @@ import Image9 from '../assests/Image9.png';
 import Image10 from '../assests/Image10.png';
 import Image11 from '../assests/Image11.png';
 import  ScrollToTop from "../components/ScrollToTop"
-
+import Header from '../components/Header'
 
 const MitraApp = () => {
   return (
     <div className="mitra-website">
-    < ScrollToTop />
-      {/* Header/Navigation */}
-      <header className="header">
-        <div className="logo">
-          <img src={Logo} alt="Mitra" />
-        </div>
-        <nav className="navigation">
-          <a href="MitraApp" className="nav-link active">Home</a>
-          <a href="/pages/About" className="nav-link">About</a>
-          <a href="#" className="nav-link">Support</a>
-          <a href="#" className="nav-link">Others</a>
-          <a href="MitraContactPage" className="nav-link">Contact</a>
-        </nav>
-        <button className="donate-button">Donate</button>
-      </header>
-
+         <Header />
+         <ScrollToTop />
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section mt-5">
         <div className="hero-content">
           <h1 className="title">Mitra</h1>
           <p className="subtitle">Free crowdfunding for India</p>
@@ -43,14 +41,14 @@ const MitraApp = () => {
           <button className="donate-button">Donate</button>
         </div>
         <div className="hero-image">
-          <img src="/mitra-hands.png" alt="Mitra hands with heart" />
+          <img src={Logo} alt="Mitra hands with heart" />
         </div>
       </section>
 
       {/* No Fee Banner */}
       <section className="fee-banner">
         <div className="megaphone-icon">
-          <img src="/megaphone-icon.svg" alt="Announcement" />
+         <FaVolumeUp size={30} color="green" />
         </div>
         <p>Crowdfunding charges No fees</p>
         <span className="percentage">0%</span>
@@ -68,31 +66,34 @@ const MitraApp = () => {
         {/* Category Tabs */}
         <div className="category-tabs">
           <div className="category-tab active">
-            <img src="/medical-icon.svg" alt="Medical" />
+           <Stethoscope size={32} color="blue" />
             <Link to="/pages/Support">
             <p>Medical</p>
             </Link>
           </div>
           <div className="category-tab">
-            <img src="/home-icon.svg" alt="Home" />
-            <Link to="/pages/MitraApp">
+         <Home fontSize="large" color="primary" />
+         <Link to="/pages/MitraApp">
             <p>Home</p>
             </Link>
           </div>
           <div className="category-tab">
-            <img src="/children-icon.svg" alt="Children" />
-            <Link to="/pages/Children">
+        <Baby size={32} color="blue" />
+            <Link to="/pages/MitraCrowdfunding">
             <p>Children</p>
             </Link>
           </div>
         </div>
 
         {/* Fundraiser Cards - First Row */}
+
         <div className="fundraiser-row">
           {/* Card 1 */}
           <div className="fundraiser-card">
             <div className="card-image">
+                <Link to="/pages/Support">
               <img src={Image6} alt="Daughter fighting for her life" />
+                 </Link>
             </div>
             <div className="card-content">
               <h3 className="card-title">My Daughter Is Fighting For Her Life, Please Help Me Support To Save Her</h3>
@@ -108,13 +109,13 @@ const MitraApp = () => {
                 <span className="raised-amount">₹70,000</span>
                 <span className="target-amount">₹1,000,000</span>
               </div>
-              <div className="update-info">
-              <Link to="/pages/Support">
                 <span>last updated by 36minutes</span>
-                </Link>
+              <div className="update-info">
+
               </div>
             </div>
           </div>
+
 
           {/* Card 2 */}
           <div className="fundraiser-card">
@@ -144,7 +145,9 @@ const MitraApp = () => {
           {/* Card 3 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src={Image8} alt="Sunitha needs blessing" />
+              <Link to="/pages/SunriseHaven">
+               <img src={Image8} alt="Sunitha needs blessing" />
+               </Link>
             </div>
             <div className="card-content">
               <h3 className="card-title">SunriseHaven -A Home of love and care for the Elderly</h3>
@@ -161,9 +164,9 @@ const MitraApp = () => {
                 <span className="target-amount">₹700,000</span>
               </div>
               <div className="update-info">
-              <Link to="/pages/SunriseHaven">
+
                 <span>last updated by Help Your</span>
-                </Link>
+
               </div>
             </div>
           </div>
@@ -199,7 +202,9 @@ const MitraApp = () => {
           {/* Card 5 */}
           <div className="fundraiser-card">
             <div className="card-image">
+              <Link to="pages/BrightFutures">
               <img src={Image10} alt="Help Manvi" />
+              </Link>
             </div>
             <div className="card-content">
               <h3 className="card-title">Help Secure a Bright Future for 13 Year-Old Naniyaka After the Tragic loss of her Father</h3>
@@ -216,9 +221,9 @@ const MitraApp = () => {
                 <span className="target-amount">₹200,000</span>
               </div>
               <div className="update-info">
-              <Link to="pages/BrightFutures">
+
                 <span>last updated by 1 hour</span>
-                </Link>
+
               </div>
             </div>
           </div>
@@ -226,7 +231,9 @@ const MitraApp = () => {
           {/* Card 6 */}
           <div className="fundraiser-card">
             <div className="card-image">
-              <img src={Image11} alt="Help Secure a Bright Future" />
+               <Link to="/pages/MitraCrowdfunding">
+               <img src={Image11} alt="Help Secure a Bright Future" />
+               </Link>
             </div>
             <div className="card-content">
               <h3 className="card-title">Help Secure a Bright Future for 14 Year-Old Naniyaka After the Tragic Loss of her Mother</h3>
@@ -243,9 +250,7 @@ const MitraApp = () => {
                 <span className="target-amount">₹200,000</span>
               </div>
               <div className="update-info">
-              <Link to="/pages/Children">
                 <span>last updated by 10minutes</span>
-              </Link>
               </div>
             </div>
           </div>
@@ -264,9 +269,10 @@ const MitraApp = () => {
         <div className="offers-grid">
           {/* Offer 1 */}
           <div className="offer-card">
-            <div className="offer-icon heart-icon">
-              <FontAwesomeIcon icon="fa-regular fa-heart" />
-            </div>
+            <div>
+                 <FaHeart color="red" size={40} />
+
+               </div>
             <div className="offer-text">
               <p>Starting a fundraiser on swayam NM is absolutely free.</p>
             </div>
@@ -274,8 +280,8 @@ const MitraApp = () => {
 
           {/* Offer 2 */}
           <div className="offer-card">
-            <div className="offer-icon chat-icon">
-              <img src="/chat-icon.svg" alt="Chat" />
+            <div>
+              <FaComment size={40} color="blue" />
             </div>
             <div className="offer-text">
               <p>24×7 assistance from dedicated fundraiser managers throughout your fundraising journey.</p>
@@ -285,7 +291,8 @@ const MitraApp = () => {
           {/* Offer 3 */}
           <div className="offer-card">
             <div className="offer-icon currency-icon">
-              <img src="/rupee-icon.svg" alt="Rupee" />
+            <FaRupeeSign size={40} color="green" />
+
             </div>
             <div className="offer-text">
               <p>We accept donations in multiple currencies from anywhere in the world.</p>
@@ -295,7 +302,7 @@ const MitraApp = () => {
           {/* Offer 4 */}
           <div className="offer-card">
             <div className="offer-icon arrow-icon">
-              <img src="/arrow-icon.svg" alt="Arrow" />
+              <FontAwesomeIcon icon={faArrowRight} size="2x" color="green" />
             </div>
             <div className="offer-text">
               <p>You can withdraw your funds at any point during the course of your fundraiser.</p>
@@ -305,7 +312,9 @@ const MitraApp = () => {
           {/* Offer 5 */}
           <div className="offer-card">
             <div className="offer-icon dashboard-icon">
-              <img src="/dashboard-icon.svg" alt="Dashboard" />
+         <MdDashboard size={40} color="blue" />
+
+
             </div>
             <div className="offer-text">
               <p>Get instant updates on your fundraiser's progress on a real-time dashboard.</p>
@@ -315,9 +324,11 @@ const MitraApp = () => {
           {/* Offer 6 */}
           <div className="offer-card">
             <div className="offer-icon card-icon">
-              <img src="/card-icon.svg" alt="Card" />
+
+
             </div>
             <div className="offer-text">
+             <FaCreditCard size={40} color="blue" />
               <p>Accepts donations all cards, netbanking, UPI and online wallets.</p>
             </div>
           </div>
@@ -337,7 +348,7 @@ const MitraApp = () => {
           <button className="prev-button">‹</button>
           <div className="testimonial-card">
             <div className="testimonial-header">
-              <img src="/user-avatar.svg" alt="User" className="user-avatar" />
+              <img src={H} alt="User" className="user-avatar" />
               <h3>Shivaram</h3>
             </div>
             <p className="testimonial-text">Great initiative from the team and really bold steps and the best wishes for them. All the best team and Keep Growing...</p>
@@ -346,7 +357,7 @@ const MitraApp = () => {
         </div>
       </section>
 
-
+<Footer />
     </div>
   );
 };

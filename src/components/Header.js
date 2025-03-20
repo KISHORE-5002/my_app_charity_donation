@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../assests/img.png';
+import { Link } from "react-router-dom";
 import './Header.css';// Make sure this CSS file exists
 
 const Header = () => {
@@ -20,20 +21,14 @@ const Header = () => {
       </div>
       <nav className="navigation">
         <ul className="nav-list">
-          <li className="nav-item">
-            <a
-              href="#top"
-              className="nav-link"
-              onClick={(e) => scrollToSection(e, 'top')}
-            >
-              Home
-            </a>
-          </li>
-          <li className="nav-item"><a href="About" className="nav-link">About</a></li>
-          <li className="nav-item"><a href="#" className="nav-link">Support</a></li>
-          <li className="nav-item"><a href="#" className="nav-link">Others</a></li>
-          <li className="nav-item"><a href="MitraContactPage" className="nav-link">Contact</a></li>
-          <li className="nav-item"><a href="#" className="nav-link donate-button">Donate</a></li>
+
+
+          <li className="nav-item"><a href="/pages/MitraApp" className="nav-link" onClick={(e) => scrollToSection(e, 'top')}>Home</a></li>
+          <li className="nav-item"><a href="/pages/About" className="nav-link">About</a></li>
+          <li className="nav-item"><a href="/pages/Support" className="nav-link">Support</a></li>
+          <li className="nav-item"><a href="/pages/MitraCrowdfunding" className="nav-link">Others</a></li>
+          <li className="nav-item"><a href="/pages/MitraContactPage" className="nav-link">Contact</a></li>
+          <li className="nav-item"><a href="/pages/Donate" className="nav-link donate-button">Donate</a></li>
         </ul>
       </nav>
     </header>

@@ -9,21 +9,22 @@ import Footer from "./components/Footer";
 import MitraSignup from "./pages/MitraSignup";
 import MitraApp from "./pages/MitraApp";
 import BrightFutures from "./pages/BrightFutures";
-//import MitraCrowdfunding from "./pages/MitraCrowdfunding";
+import MitraCrowdfunding from "./pages/MitraCrowdfunding";
 import SunriseHaven from "./pages/SunriseHaven";
 import About from "./pages/About";
-import Children from "./pages/Children";
+//import Children from "./pages/Children";
 import MitraContactPage from "./pages/MitraContactPage";
-
-
+import Donate from "./pages/Donate";
+import Mitra from "./pages/Mitra";
+import Mitrap from "./pages/Mitrap";
+import MitraWebsite from "./pages/MitraWebsite";
 
 const App=()=> {
   return (
     <BrowserRouter>
-
       <Routes>
-        <Route path="/" element={<MitraApp/>} />
-        <Route path="/pages/MitraApp" element={<LoginPage />} />
+        <Route path="/" element={<MitraWebsite/>} />
+        <Route path="/pages/LoginPage" element={<LoginPage />} />
         <Route path="/pages/AdminLogin" element={<AdminLogin />} />
         <Route path="/pages/Signin" element={<Signin />} />
         <Route path="/pages/MitraSignup" element={<MitraSignup/>} />
@@ -31,9 +32,12 @@ const App=()=> {
         <Route path="/pages/About" element={<About />} />
         <Route path="/pages/BrightFutures" element={<BrightFutures />} />
         <Route path="/pages/SunriseHaven" element={<SunriseHaven />} />
-        <Route path="/pages/Children" element={<Children />} />
-        <Route path="/pages/MitraContactPage" element={<MitraContactPage />} />
 
+        <Route path="/pages/MitraContactPage" element={<MitraContactPage />} />
+        <Route path="/pages/MitraCrowdfunding" element={<MitraCrowdfunding />} />
+        <Route path="/pages/Donate" element={<Donate/>} />
+        <Route path="/pages/Mitra" element={<Mitra/>} />
+        <Route path="/pages/Mitrap" element={<Mitrap/>} />
 
       </Routes>
     </BrowserRouter>

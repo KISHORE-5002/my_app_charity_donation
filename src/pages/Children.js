@@ -1,7 +1,9 @@
 import React from 'react';
 import './Children.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import  ScrollToTop from "../components/ScrollToTop"
 import  Header from "../components/Header"
+import  Image10 from "../assests/Image10.png"
 
 const Children = () => {
   // Sample campaign data
@@ -9,7 +11,7 @@ const Children = () => {
     {
       id: 1,
       title: 'Bright Futures - Empowering Children Through Education',
-      image: '/images/child-education.jpg',
+      image: Image10,
       raisedAmount: 40495,
       goalAmount: 50000,
       organizer: 'susmita',

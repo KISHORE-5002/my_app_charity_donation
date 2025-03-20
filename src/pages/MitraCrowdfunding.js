@@ -1,5 +1,7 @@
 import React from 'react';
 import './MitraCrowdfunding.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Image10 from '../assests/Image10.png';
 import  ScrollToTop from "../components/ScrollToTop"
 
 
@@ -9,7 +11,7 @@ const MitraCrowdfunding = () => {
     {
       id: 1,
       title: 'Bright Futures - Empowering Children Through Education',
-      image: 'child-education.jpg',
+      image: '../assests/Image10.png',
       raisedAmount: 40405,
       goalAmount: 50000,
       creator: 'susmiya',
@@ -140,7 +142,7 @@ const MitraCrowdfunding = () => {
           {allFundraisers.map((fundraiser, index) => (
             <div className="fundraiser-card" key={`${fundraiser.id}-${index}`}>
               <div className="card-image-container">
-                <img src={require(`./assets/${fundraiser.image}`)} alt={fundraiser.title} className="card-image" />
+                <img src="#" alt={fundraiser.title} className="card-image" />
               </div>
               <div className="card-content">
                 <h3 className="card-title">{fundraiser.title}</h3>

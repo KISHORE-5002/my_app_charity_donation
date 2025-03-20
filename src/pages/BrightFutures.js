@@ -1,27 +1,19 @@
 import React from 'react';
 import './BrightFutures.css';
+import Footer from '../components/Footer';
+import Image10 from '../assests/Image10.png';
+import { FaVolumeUp} from "react-icons/fa";
+import boys from '../assests/boys.png';
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
 import { Link } from "react-router-dom";
 import  ScrollToTop from "../components/ScrollToTop"
+import Header from '../components/Header'
 
 const BrightFutures = () => {
   return (
     <div className="page-container">
     <ScrollToTop />
-      <header className="header">
-        <div className="logo-container">
-          <img src="/logo.svg" alt="Mitra logo" className="logo" />
-          <span className="logo-text">mitra</span>
-        </div>
-        <nav className="main-nav">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#" className="active">Support</a>
-          <a href="#">Others</a>
-          <a href="#">Contact</a>
-        </nav>
-        <button className="donate-button header-donate">Donate</button>
-      </header>
+      <Header />
 
       <main className="main-content">
         <h1 className="page-title">Bright Futures – Empowering Children Through Education</h1>
@@ -29,13 +21,13 @@ const BrightFutures = () => {
         <div className="content-container">
           <div className="left-column">
             <div className="campaign-image-container">
-              <img src="/child-at-blackboard.jpg" alt="Child writing on blackboard" className="campaign-image" />
+              <img src={Image10} alt="Child writing on blackboard" className="campaign-image" />
             </div>
 
             <div className="about-section">
               <div className="author-info">
                 <div className="avatar">
-                  <img src="/avatar.svg" alt="Avatar" />
+                  <img src={boys} alt="Avatar" />
                 </div>
                 <div className="author-text">
                   <p className="author-created">created</p>
@@ -83,9 +75,11 @@ const BrightFutures = () => {
 
           <div className="right-column">
             <div className="donation-card">
+              <Link to="/pages/Donate">
               <button className="contribute-now">
                 <span className="heart-icon">♥</span> Contribute now
               </button>
+              </Link>
 
               <div className="amount-raised">
                 <div className="amount">
@@ -152,9 +146,9 @@ const BrightFutures = () => {
                   <label htmlFor="contribution">Contribution:</label>
                   <input type="text" id="contribution" placeholder="Contribution" />
                 </div>
-
+                <Link to="/pages/Donate">
                 <button className="donate-button">Donate</button>
-
+                </Link>
                 <p className="form-footer">"Be the Change with Every Click"</p>
               </div>
 
@@ -168,7 +162,7 @@ const BrightFutures = () => {
 
             <div className="no-fees-section">
               <div className="megaphone-icon">
-                <img src="/megaphone.svg" alt="Megaphone" />
+                  <FaVolumeUp size={30} color="green" />
               </div>
               <div className="no-fees-text">
                 <p>Crowdfunding charges No fees</p>
@@ -179,67 +173,7 @@ const BrightFutures = () => {
         </div>
       </main>
 
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-column">
-            <h3 className="footer-title">Mitra</h3>
-            <ul className="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Others</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-            <button className="footer-donate">Donate</button>
-          </div>
-
-          <div className="footer-column">
-            <h3 className="footer-title">Office address</h3>
-            <p className="address">
-              Flat 201, BVR Lake Front,<br />
-              1/2, Karaya Nagar,<br />
-              Vimanapurra, Nagarora,<br />
-              Bangalore, Karnataka<br />
-              560049
-            </p>
-            <div className="contact-info">
-              <h3 className="footer-title">Contact us</h3>
-              <p>for further queries contact:</p>
-              <p>Founder: Fani</p>
-              <p>Contact: fanifrauisa2002@gmail.com</p>
-            </div>
-          </div>
-
-          <div className="footer-column">
-            <h3 className="footer-title">Support</h3>
-            <ul className="footer-links">
-              <li><a href="#">Medical</a></li>
-              <li><a href="#">Memorial</a></li>
-              <li><a href="#">Non-profits</a></li>
-              <li><a href="#">Others...</a></li>
-            </ul>
-            <div className="social-section">
-              <p>Find us on</p>
-              <div className="social-icons">
-                <a href="#"><span className="social-icon">f</span></a>
-                <a href="#"><span className="social-icon">t</span></a>
-                <a href="#"><span className="social-icon">x</span></a>
-                <a href="#"><span className="social-icon">in</span></a>
-              </div>
-            </div>
-            <button className="contact-button">
-              Contact <span className="contact-icon">📞</span>
-            </button>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <div className="footer-links-bottom">
-            <a href="#">Security & Privacy</a>
-            <a href="#">Conditions for use</a>
-          </div>
-          <div className="copyright">© 2020-2023 Mitra.org all rights reserved</div>
-        </div>
-      </footer>
+<Footer />
     </div>
   );
 };

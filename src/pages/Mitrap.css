@@ -1,0 +1,255 @@
+/* PaymentForm.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #a94d6a;
+  --secondary-color: #b46aaf;
+  --text-color: #333;
+  --light-text: #666;
+  --bg-color: #fff;
+  --border-color: #e0e0e0;
+  --border-radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.payment-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.payment-card {
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 30px;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.payment-header h1 {
+  color: #6171db;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.payment-body {
+  margin-bottom: 30px;
+}
+
+.payment-body h2 {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.payment-option {
+  margin-bottom: 15px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  flex: 1;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+}
+
+.radio-container input:checked ~ .radio-custom {
+  background-color: #fff;
+  border: 2px solid #6171db;
+}
+
+.radio-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-custom:after {
+  display: block;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6171db;
+}
+
+.option-details {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.option-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.option-subtitle {
+  font-size: 0.8rem;
+  color: var(--light-text);
+  margin-top: 2px;
+}
+
+.payment-icons {
+  display: flex;
+  align-items: center;
+}
+
+.payment-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  object-fit: contain;
+}
+
+.card-details {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.half {
+  flex: 1;
+}
+
+.card-input {
+  width: 100%;
+  padding: 12px 15px;
+  padding-right: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+}
+
+.card-input:focus {
+  outline: none;
+  border-color: #6171db;
+}
+
+.card-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--light-text);
+}
+
+.payment-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back {
+  background-color: #fff;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-back:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-contribute {
+  background-color: #9b3157;
+  color: #fff;
+}
+
+.btn-contribute:hover {
+  background-color: #7e2746;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .payment-card {
+    padding: 20px;
+  }
+
+  .payment-header h1 {
+    font-size: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

@@ -1,10 +1,14 @@
 import React from 'react';
 import './Support.css';
+import Footer from "../components/Footer";
 import { BrowserRouter, Router,Route,Routes} from "react-router-dom";
+import { FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import  ScrollToTop from "../components/ScrollToTop"
+import Image6 from "../assests/Image6.png";
 import  Header from "../components/Header"
-import  Footer from "../components/Footer"
+import { FaVolumeUp} from "react-icons/fa";
+
 
 const Support = () => {
   return (
@@ -20,7 +24,7 @@ const Support = () => {
         <div className="fundraiser-container">
           <div className="fundraiser-content">
             <div className="patient-image">
-              <img src="/patient.jpg" alt="Patient in hospital" />
+              <img src={Image6} alt="Patient in hospital" />
             </div>
 
             <div className="creator-info">
@@ -131,8 +135,9 @@ const Support = () => {
                   <label htmlFor="contribution">Contribution:</label>
                   <input type="text" id="contribution" placeholder="Contribution" />
                 </div>
-
+                    <Link to="/pages/Donate">
                 <button type="submit" className="donate-submit-btn">Donate</button>
+              </Link>
               </form>
 
               <p className="click-text">"Be the Change with Every Click"</p>
@@ -147,9 +152,11 @@ const Support = () => {
 
         <div className="fee-banner">
           <div className="megaphone-icon">
-            <img src="/megaphone.png" alt="Megaphone" />
+            <FaVolumeUp size={30} color="green" />
           </div>
+          <Link to="pages/Donate">
           <p className="fee-text">Crowdfunding charges No fees</p>
+          </Link>
           <p className="fee-percentage">0%</p>
         </div>
       </main>
